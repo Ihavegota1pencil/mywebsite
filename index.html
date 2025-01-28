@@ -46,9 +46,9 @@
             width: 100%;
         }
         img {
-            max-width: 20%;  /* Genişliği %80 olarak ayarladık */
+            max-width: 20%;  
             height: auto;
-            border-radius: 8px;  /* Yumuşak köşeler için */
+            border-radius: 8px; 
         }
     </style>
 </head>
@@ -63,7 +63,7 @@
     </nav>
     <main>
         <h2 id="response"></h2>
-        <h3>Mottomuz : Hayat fani ölüm ani 1 gül atsan nolur yani?</h3>
+        <h3>Ban yedim bitince tekrar görüşürüz!</h3>
         <p>Yakında diğer kısımlar da tamamlanacak, o zamana dek alın kedimin fotoğrafı:</p>
         <p><img src="14.jpg" alt="Kedimin Fotoğrafı"></p>
     </main>
@@ -74,7 +74,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            // Sayfa yüklendiğinde otomatik olarak API çağrısı yapılıyor.
+           
             $.ajax({
                 url: 'https://api.wolvesville.com/players/search?username=DilenciDegilim',
                 type: 'GET',
@@ -84,7 +84,7 @@
                     'Accept': 'application/json'
                 },
                 success: function(response) {
-                    // API yanıtından 'receivedRosesCount' değerini alıp ekrana yazdırıyoruz.
+                   
                     if (response && response.receivedRosesCount !== undefined) {
                         $('#response').html('Dilenilen gül sayısı: ' + response.receivedRosesCount + ' 🌹');
                     } else {
